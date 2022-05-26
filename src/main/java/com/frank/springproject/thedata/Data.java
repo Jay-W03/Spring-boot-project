@@ -4,13 +4,13 @@ import java.util.Objects;
 
 // POJO we can use to send data backj and forth to server
 
-public class UmaData {
+public class Data {
         private String question;
         private String answer;
 
-        public UmaData() {}
+        public Data() {}
 
-        public UmaData(String question, String answer) {
+        public Data(String question, String answer) {
                 this.question = question;
                 this.answer = answer;
         }
@@ -39,9 +39,9 @@ public class UmaData {
         @Override
         public boolean equals(Object o) {
                 if (this == o) return true;
-                if (!(o instanceof UmaData)) return false;
-                UmaData umaData = (UmaData) o;
-                return getQuestion().equals(umaData.getQuestion()) && getAnswer().equals(umaData.getAnswer());
+                if (!(o instanceof Data)) return false;
+                Data data = (Data) o;
+                return getQuestion().equals(data.getQuestion()) && getAnswer().equals(data.getAnswer());
         }
 
         @Override
